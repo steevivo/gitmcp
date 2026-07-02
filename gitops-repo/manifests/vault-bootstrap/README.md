@@ -3,17 +3,12 @@
 En mode non-dev avec storage `file` persistant, Vault démarre **scellé** (sealed)
 et non initialisé au premier déploiement. Contrairement au mode dev, ça nécessite
 une init manuelle une fois, mais aussi un **unseal après chaque redémarrage du pod**
-(y compris quand tu stoppes/redémarres le lab le soir), sauf si tu configures
-l'auto-unseal (overkill pour un lab).
 
 ## 1. Init (une seule fois, à la création du volume)
 
 ```bash
 kubectl exec -n vault vault-0 -- vault operator init -key-shares=1 -key-threshold=1
 ```
-
-Ça retourne 1 "Unseal Key" et 1 "Initial Root Token" — **à conserver précieusement**
-(hors du repo Git, ex: gestionnaire de mots de passe).
 
 ## 2. Unseal
 
