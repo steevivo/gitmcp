@@ -52,4 +52,4 @@ kubectl exec -n vault vault-0 -- vault kv put secret/alerta/server \
 ## Idée d'automatisation future
 
 Un petit script `unseal.sh` lancé au démarrage du lab (avec la clé stockée
-localement hors Git) pour éviter de retaper la commande manuellement chaque matin.
+localement hors Git.
