@@ -22,7 +22,7 @@ spec:
             - until pg_isready -h alerta-postgres-rw -p 5432; do sleep 2; done
       containers:
         - name: alerta-server
-          image: alerta/alerta:latest
+          image: alerta/alerta-web:latest
           ports:
             - containerPort: 8080
           envFrom:
