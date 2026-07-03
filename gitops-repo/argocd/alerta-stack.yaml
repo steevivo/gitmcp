@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/steevivo/gitmcp.git
     targetRevision: main
-    path: manifests/alerta
+    path: gitops-repo/manifests/alerta
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
