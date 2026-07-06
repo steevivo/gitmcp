@@ -29,6 +29,7 @@ spec:
               storage "file" {
                 path = "/vault/data"
               }
+              ui = true
         injector:
           enabled: false
   destination:
